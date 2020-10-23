@@ -8,7 +8,6 @@ class GalleryItem extends Component {
     }
 
     renderDescription = () => {
-        console.log('clicked pic', this.state.showDescription);
         this.setState({
             showDescription: !this.state.showDescription
         })
@@ -20,10 +19,11 @@ class GalleryItem extends Component {
             {this.state.showDescription === false ?
                 <img className='image' onClick={this.renderDescription} src={this.props.image.path} alt={this.props.image.description}/>
                 :
-                <p onClick={this.renderDescription}>{this.props.image.description}</p>
+                <p className='description' onClick={this.renderDescription}>{this.props.image.description}</p>
             }
             
             <button className='like'>LIKE</button>
+            <p>{this.props.image.likes} people like this!</p>
            </div>
         )
     }

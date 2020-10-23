@@ -3,10 +3,25 @@
     margin: 10px;
 }
 
+/* I thought the inset border was fun because it looks kind of like a picture frame */
 .image {
+    border: 10px inset;
+    margin: 10px;
     width: 100px;
     height: 100px;
 }
+
+.description {
+    border: 10px inset;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .like {
     display: block;
