@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './GalleryItem.css'
 
 class GalleryItem extends Component {
     
@@ -15,15 +16,15 @@ class GalleryItem extends Component {
     
     render() {
         return (
-           <>
+           <div className='item' key={this.props.image.id}>
             {this.state.showDescription === false ?
-                <img onClick={this.renderDescription} key={this.props.image.id} src={this.props.image.path} alt={this.props.image.description} width="100" height="100"/>
+                <img className='image' onClick={this.renderDescription} src={this.props.image.path} alt={this.props.image.description}/>
                 :
                 <p onClick={this.renderDescription}>{this.props.image.description}</p>
             }
             
-            <button>LIKE</button>
-           </> 
+            <button className='like'>LIKE</button>
+           </div>
         )
     }
 }

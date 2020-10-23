@@ -1,0 +1,14 @@
+.item {
+    display: inline-block;
+    margin: 10px;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.like {
+    display: block;
+    margin: auto;
+}
