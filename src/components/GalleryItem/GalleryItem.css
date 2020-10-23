@@ -26,4 +26,17 @@
 .like {
     display: block;
     margin: auto;
+    border: none;
+    color: #008CBA;
+    background-color: white;
+    border: 1px solid #008CBA;
+    padding: 8px 18px;
+    border-radius: 10px;
+}
+
+/* Hover experiment */
+.like:hover {
+    background-color: #008CBA;
+    color: white;
+    border: 1px solid #008CBA;
 }
