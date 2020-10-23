@@ -5,7 +5,7 @@ import './GalleryItem.css'
 class GalleryItem extends Component {
     
     state = {
-        showDescription: false
+        showDescription: false,
     }
 
     renderDescription = () => {
@@ -13,6 +13,7 @@ class GalleryItem extends Component {
             showDescription: !this.state.showDescription
         })
     }
+
 
     likePic = (imageId) => {
         console.log('image put', imageId);
@@ -38,7 +39,11 @@ class GalleryItem extends Component {
                 
                 <button onClick={() => this.likePic(this.props.image.id)} className='like'>LIKE</button>
                 
+                {this.props.image.likes === 1 ?
+                <p>{this.props.image.likes} person likes this!</p>
+                :
                 <p>{this.props.image.likes} people like this!</p>
+                }
            </div>
         )
     }

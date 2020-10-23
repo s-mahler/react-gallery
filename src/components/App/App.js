@@ -36,7 +36,6 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <p>Gallery goes here</p>
         <GalleryList imagesArray={this.state.imagesArray} getImages={this.getImages}/>
       </div>
     );
