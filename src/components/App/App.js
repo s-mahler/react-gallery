@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
+import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
+
+  state = {
+    imagesArray: []
+  }
+
+  componentDidMount = () => {
+    console.log('app.js is mounted');
+    this.getImages();
+  }
+
+  getImages = () => {
+    console.log('in GET');
+    axios({
+      method: 'GET',
+      url: '/gallery'
+    }).then((response) => {
+      console.log(response.data);
+      this.setState({
+        imagesArray: response.data
+      });
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -10,7 +37,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList imagesArray={this.state.imagesArray}/>
       </div>
     );
   }
