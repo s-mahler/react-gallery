@@ -37,7 +37,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <GalleryList imagesArray={this.state.imagesArray}/>
+        <GalleryList imagesArray={this.state.imagesArray} getImages={this.getImages}/>
       </div>
     );
   }
