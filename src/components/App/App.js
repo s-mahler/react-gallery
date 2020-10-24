@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 class App extends Component {
 
@@ -41,6 +42,7 @@ class App extends Component {
         <h4>Click it again to go back!</h4>
         {/* Send array and GET function as props */}
         <GalleryList imagesArray={this.state.imagesArray} getImages={this.getImages}/>
+        <GalleryForm/>
       </div>
     );
   }
