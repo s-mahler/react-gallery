@@ -42,6 +42,9 @@ class App extends Component {
         <h4>Click it again to go back!</h4>
         {/* Send array and GET function as props */}
         <GalleryList imagesArray={this.state.imagesArray} getImages={this.getImages}/>
+        <h4>Submit your own image</h4>
+        {/* This form has it framework set up, but has little functionality */}
+        {/* It was left in to demonstrate making a component of a form */}
         <GalleryForm/>
       </div>
     );

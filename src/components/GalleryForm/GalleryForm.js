@@ -9,7 +9,7 @@ class GalleryForm extends Component {
         }
     }
 
-
+    // Function that triggers on characters being entered into the inputs
     handleChange = (event) => {
         console.log('change', event.target.value);
     }
